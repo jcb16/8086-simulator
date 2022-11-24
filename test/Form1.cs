@@ -158,14 +158,70 @@ namespace test
 
         private void SUBMIT_Click(object sender, EventArgs e)
         {
-            if (AX_source.Checked && BX_destination.Checked || BX_source.Checked && AX_destination.Checked)
+            //AX source
+            if (AX_source.Checked && BX_destination.Checked)
             {
                 (textBoxAX.Text, textBoxBX.Text) = (textBoxBX.Text, textBoxAX.Text);
             }
-            if(AX_source.Checked && CX_destination.Checked || CX_source.Checked && AX_destination.Checked)
+            if (AX_source.Checked && CX_destination.Checked)
             {
                 (textBoxAX.Text, textBoxCX.Text) = (textBoxCX.Text, textBoxAX.Text);
             }
+
+            if (AX_source.Checked && DX_destination.Checked)
+            {
+                (textBoxAX.Text, textBoxDX.Text) = (textBoxDX.Text, textBoxAX.Text);
+            }
+
+            //BX source
+            if (BX_source.Checked && AX_destination.Checked)
+            {
+                (textBoxBX.Text, textBoxAX.Text) = (textBoxAX.Text, textBoxBX.Text);
+            }
+
+            if (BX_source.Checked && CX_destination.Checked)
+            {
+                (textBoxBX.Text, textBoxCX.Text) = (textBoxCX.Text, textBoxBX.Text);
+            }
+
+            if (BX_source.Checked && DX_destination.Checked)
+            {
+                (textBoxBX.Text, textBoxDX.Text) = (textBoxDX.Text, textBoxBX.Text);
+            }
+
+            //CX source
+            if (CX_source.Checked && AX_destination.Checked)
+            {
+                (textBoxCX.Text, textBoxAX.Text) = (textBoxAX.Text, textBoxCX.Text);
+            }
+
+            if (CX_source.Checked && BX_destination.Checked)
+            {
+                (textBoxCX.Text, textBoxBX.Text) = (textBoxBX.Text, textBoxCX.Text);
+            }
+
+            if (CX_source.Checked && DX_destination.Checked)
+            {
+                (textBoxCX.Text, textBoxDX.Text) = (textBoxDX.Text, textBoxCX.Text);
+            }
+
+            //DX source
+            if (DX_source.Checked && AX_destination.Checked)
+            {
+                (textBoxDX.Text, textBoxAX.Text) = (textBoxAX.Text, textBoxDX.Text);
+            }
+
+            if (DX_source.Checked && BX_destination.Checked)
+            {
+                (textBoxDX.Text, textBoxBX.Text) = (textBoxBX.Text, textBoxDX.Text);
+            }
+
+            if (DX_source.Checked && CX_destination.Checked)
+            {
+                (textBoxDX.Text, textBoxCX.Text) = (textBoxCX.Text, textBoxDX.Text);
+            }
+
+            
             //AX source
             //if (AX_source.Checked && BX_destination.Checked || BX_source.Checked && AX_destination.Checked)
             //{
@@ -218,6 +274,87 @@ namespace test
             //{
             //    (textBoxDX.Text, textBoxCX.Text) = (textBoxCX.Text, textBoxDX.Text);
             //}
+        }
+
+        private void reset_Click(object sender, EventArgs e)
+        {
+            textBoxAX.Clear();
+            textBoxBX.Clear();
+            textBoxCX.Clear();
+            textBoxDX.Clear();  
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //AX
+            if(AXmove.Checked && BXmove1.Checked){
+                textBoxBX.Text = textBoxAX.Text;
+            }
+
+            if (AXmove.Checked && CXmove1.Checked)
+            {
+                textBoxCX.Text = textBoxAX.Text;
+            }
+
+            if (AXmove.Checked && DXmove1.Checked)
+            {
+                textBoxDX.Text = textBoxAX.Text;
+            }
+
+            //BX
+            if (BXmove.Checked && AXmove1.Checked)
+            {
+                textBoxAX.Text = textBoxBX.Text;
+            }
+
+            if (BXmove.Checked && CXmove1.Checked)
+            {
+                textBoxCX.Text = textBoxBX.Text;
+            }
+
+            if (BXmove.Checked && DXmove1.Checked)
+            {
+                textBoxDX.Text = textBoxBX.Text;
+            }
+
+            //CX
+            if (CXmove.Checked && AXmove1.Checked)
+            {
+                textBoxAX.Text = textBoxCX.Text;
+            }
+
+            if (CXmove.Checked && BXmove1.Checked)
+            {
+                textBoxBX.Text = textBoxCX.Text;
+            }
+
+            if (CXmove.Checked && DXmove1.Checked)
+            {
+                textBoxDX.Text = textBoxCX.Text;
+            }
+
+            //DX
+            if (DXmove.Checked && AXmove1.Checked)
+            {
+                textBoxAX.Text = textBoxDX.Text;
+            }
+
+            if (DXmove.Checked && BXmove1.Checked)
+            {
+                textBoxBX.Text = textBoxDX.Text;
+            }
+
+            if (DXmove.Checked && CXmove1.Checked)
+            {
+                textBoxCX.Text = textBoxDX.Text;
+            }
+
+        }
+
+        private void label1_Click_4(object sender, EventArgs e)
+        {
+
         }
     }
 }
